@@ -29,14 +29,17 @@ public class Main {
         }
 
         for (Map.Entry<Character, Integer> letter : map.entrySet()) {
-            if (letter.getValue() < min) {
-                min = letter.getValue();
-                cMin = letter.getKey();
+            int value= letter.getValue();
+            char key= letter.getKey();
+
+            if (value < min) {
+                min = value;
+                cMin = key;
             }
 
-            if (letter.getValue() > max) {
-                max = letter.getValue();
-                cMax = letter.getKey();
+            if (value > max) {
+                max = value;
+                cMax = key;
             }
         }
         System.out.println("Анализ Lorem ipsum.");
